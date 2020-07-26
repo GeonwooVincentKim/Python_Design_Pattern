@@ -35,6 +35,11 @@ def create_diagram(factory):
 
 # Abstract Class named DiagramFactory.
 class DiagramFactory:
+    # From now on, 'make_class_name()' methods
+    # are Class Method.
+    # If you use @classmethod, it makes code simplify,
+    # and leads developers not to write down 'self'.
+    # Instead, 'cls' substitute 'self'.
     @classmethod
     def make_diagram(cls, width, height):
         return Diagram(width, height)
